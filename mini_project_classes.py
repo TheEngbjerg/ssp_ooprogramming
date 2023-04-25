@@ -10,7 +10,7 @@ class DatabaseCollection():
     storing measurements from sensors in the file.
 
     """
-    
+
     def __init__(self) -> None:
         self.sensor_id = None
 
@@ -51,7 +51,7 @@ class Sensor():
             self.receiver = (address, port)
         else:
             raise ValueError('connection_mode error.')
-        
+
     def measure(self, data):
         """ Adds measurement to database file.
 
@@ -89,7 +89,7 @@ class HumidSensor(Sensor):
                  address=None, port=None) -> None:
         super().__init__(sensor_id, database, connection_mode, 
                          serial_port, address, port)
-    
+
     def measure(self):
         """ Makes a hypothetical measurement of the humidity. Then uses 
         the parent method "measure" to write the data to database.
@@ -107,7 +107,7 @@ class CO2Sensor(Sensor):
                  address=None, port=None) -> None:
         super().__init__(sensor_id, database, connection_mode, 
                          serial_port, address, port)
-    
+
     def measure(self):
         """ Makes a hypothetical measurement of the CO2 level. Then uses 
         the parent method "measure" to write the data to database.
