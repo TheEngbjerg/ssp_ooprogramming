@@ -40,7 +40,7 @@ class Sensor():
     sensors used in the system.
     """
 
-    def __init__(self, sensor_id, database, connection_mode, 
+    def __init__(self, sensor_id, database, connection_mode,
                  serial_port=None, address=None, port=None) -> None:
         self.sensor_id = sensor_id
         self.database: DatabaseCollection = database
@@ -62,14 +62,14 @@ class Sensor():
         self.database.add_data(data)
 
 class TempSensor(Sensor):
-    """ The TempSensor class is used for creating a temperature sensor 
+    """ The TempSensor class is used for creating a temperature sensor
     objects.
 
     """
 
     def __init__(self, sensor_id, database, connection_mode, serial_port=None,
                  address=None, port=None) -> None:
-        super().__init__(sensor_id, database, connection_mode, 
+        super().__init__(sensor_id, database, connection_mode,
                          serial_port, address, port)
 
     def measure(self):
@@ -87,7 +87,7 @@ class HumidSensor(Sensor):
 
     def __init__(self, sensor_id, database, connection_mode, serial_port=None,
                  address=None, port=None) -> None:
-        super().__init__(sensor_id, database, connection_mode, 
+        super().__init__(sensor_id, database, connection_mode,
                          serial_port, address, port)
 
     def measure(self):
@@ -105,7 +105,7 @@ class CO2Sensor(Sensor):
 
     def __init__(self, sensor_id, database, connection_mode, serial_port=None,
                  address=None, port=None) -> None:
-        super().__init__(sensor_id, database, connection_mode, 
+        super().__init__(sensor_id, database, connection_mode,
                          serial_port, address, port)
 
     def measure(self):
