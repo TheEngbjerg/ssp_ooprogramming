@@ -69,7 +69,7 @@ class TempSensor(Sensor):
 
     def __init__(self, sensor_id, database, connection_mode, serial_port=None,
                  address=None, port=None) -> None:
-        super().__init__(sensor_id, database, connection_mode, 
+        super().__init__(sensor_id, database, connection_mode,
                          serial_port, address, port)
 
     def measure(self):
@@ -78,7 +78,7 @@ class TempSensor(Sensor):
 
         """
         data = random.uniform(16, 24)
-        super().measure(self, data)
+        super().measure(data)
 
 class HumidSensor(Sensor):
     """ The HumidSensor class is used for creating a humidity sensor objects.
@@ -87,7 +87,7 @@ class HumidSensor(Sensor):
 
     def __init__(self, sensor_id, database, connection_mode, serial_port=None,
                  address=None, port=None) -> None:
-        super().__init__(sensor_id, database, connection_mode, 
+        super().__init__(sensor_id, database, connection_mode,
                          serial_port, address, port)
 
     def measure(self):
@@ -96,7 +96,7 @@ class HumidSensor(Sensor):
 
         """
         data = random.uniform(0, 17.3)
-        super().measure(self, data)
+        super().measure(data)
 
 class CO2Sensor(Sensor):
     """ The CO2Sensor class is used for creating a CO2 sensor objects.
@@ -105,7 +105,7 @@ class CO2Sensor(Sensor):
 
     def __init__(self, sensor_id, database, connection_mode, serial_port=None,
                  address=None, port=None) -> None:
-        super().__init__(sensor_id, database, connection_mode, 
+        super().__init__(sensor_id, database, connection_mode,
                          serial_port, address, port)
 
     def measure(self):
